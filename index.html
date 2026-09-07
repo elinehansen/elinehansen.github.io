@@ -18,11 +18,21 @@
       line-height: 1.8;
     }
 
+    @keyframes headerGlow {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 40px rgba(76, 175, 80, 0.5);
+      }
+    }
+
     header {
-      background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
-      color: #1b5e20;
+      background: linear-gradient(135deg, #66bb6a 0%, #43a047 50%, #2e7d32 100%);
+      color: #fff;
       padding: 4rem 1.5rem;
       text-align: center;
+      animation: headerGlow 4s ease-in-out infinite;
     }
 
     .header-content {
@@ -54,14 +64,14 @@
       font-size: 3.5rem;
       margin-bottom: 0.5rem;
       font-weight: 300;
-      color: #1b5e20;
+      color: #fff;
       letter-spacing: 2px;
       font-style: italic;
       font-family: 'Georgia', 'Garamond', serif;
     }
 
     .header-text .tagline {
-      color: #388e3c;
+      color: #e8f5e9;
       font-size: 1.1rem;
       font-weight: 400;
       line-height: 1.6;
@@ -80,7 +90,7 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      color: #2d5016;
+      color: #e8f5e9;
       font-size: 0.95rem;
       font-weight: 500;
       transition: all 0.3s ease;
@@ -89,7 +99,7 @@
 
     .icon-item:hover {
       transform: translateY(-2px);
-      color: #1b5e20;
+      color: #fff;
     }
 
     .icon-symbol {
@@ -110,7 +120,7 @@
     }
 
     nav a {
-      color: #1b5e20;
+      color: #fff;
       text-decoration: none;
       font-size: 1rem;
       font-weight: 600;
@@ -122,7 +132,7 @@
 
     nav a:hover {
       opacity: 1;
-      border-bottom: 3px solid #1b5e20;
+      border-bottom: 3px solid #fff;
     }
 
     main {
