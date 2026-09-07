@@ -12,36 +12,36 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f5f9f7;
-      color: #1a1a1a;
-      line-height: 1.6;
+      color: #2d3436;
+      line-height: 1.8;
     }
 
     header {
       background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
-      color: #2d5016;
-      padding: 3rem 1.5rem;
+      color: #1b5e20;
+      padding: 4rem 1.5rem;
       text-align: center;
     }
 
     .header-content {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 3rem;
+      gap: 4rem;
       justify-content: flex-start;
     }
 
     .profile-image {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      border: 5px solid #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       flex-shrink: 0;
     }
 
@@ -51,80 +51,94 @@
     }
 
     .header-text h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+      font-size: 3.5rem;
+      margin-bottom: 0.8rem;
       font-weight: 700;
       color: #1b5e20;
+      letter-spacing: -1px;
     }
 
-    .header-text p {
+    .header-text .subtitle {
       color: #2d5016;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       letter-spacing: 0.5px;
       font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .header-text .tagline {
+      color: #388e3c;
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 500px;
     }
 
     nav {
       display: flex;
       justify-content: flex-start;
-      gap: 2rem;
-      margin-top: 1.5rem;
+      gap: 2.5rem;
+      margin-top: 2rem;
       flex-wrap: wrap;
     }
 
     nav a {
       color: #1b5e20;
       text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
+      font-size: 1rem;
+      font-weight: 600;
       opacity: 0.9;
-      transition: opacity 0.3s ease;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 0.25rem;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+      padding-bottom: 0.35rem;
     }
 
     nav a:hover {
       opacity: 1;
-      border-bottom: 2px solid #1b5e20;
+      border-bottom: 3px solid #1b5e20;
     }
 
     main {
-      max-width: 700px;
+      max-width: 750px;
       margin: 0 auto;
-      padding: 2.5rem 1.5rem;
+      padding: 3rem 1.5rem;
     }
 
     section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
 
     h2 {
-      font-size: 1.4rem;
-      margin-bottom: 0.8rem;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
       border-bottom: 3px solid #81c784;
-      padding-bottom: 0.4rem;
+      padding-bottom: 0.5rem;
       color: #1b5e20;
+      font-weight: 700;
     }
 
     footer {
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem 1.5rem;
       color: #66bb6a;
-      font-size: 0.85rem;
+      font-size: 0.95rem;
     }
 
     .card {
       background: #fff;
-      border-radius: 8px;
-      padding: 1.2rem;
-      box-shadow: 0 2px 8px rgba(76, 175, 80, 0.1);
-      border-left: 4px solid #81c784;
+      border-radius: 10px;
+      padding: 1.8rem;
+      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.12);
+      border-left: 5px solid #81c784;
+      font-size: 1.05rem;
+      line-height: 1.8;
     }
 
     a {
       color: #2e7d32;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
     a:hover {
@@ -136,7 +150,7 @@
       .header-content {
         flex-direction: column;
         text-align: center;
-        gap: 1.5rem;
+        gap: 2rem;
       }
 
       .header-text {
@@ -144,16 +158,21 @@
       }
 
       .header-text h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+      }
+
+      .header-text .subtitle {
+        font-size: 1.2rem;
       }
 
       nav {
         justify-content: center;
+        gap: 1.5rem;
       }
 
       .profile-image {
-        width: 120px;
-        height: 120px;
+        width: 160px;
+        height: 160px;
       }
     }
   </style>
@@ -165,7 +184,8 @@
       <img src="profile.jpg" alt="Eline Hansen" class="profile-image">
       <div class="header-text">
         <h1>Eline Hansen</h1>
-        <p>Din personlige helseveileder</p>
+        <p class="subtitle">Din personlige helseveileder</p>
+        <p class="tagline">Jeg hjelper deg der du er og med det du har behov for – digitalt eller fysisk, på dine betingelser.</p>
         <nav>
           <a href="#om">Om</a>
           <a href="#prosjekter">Prosjekter</a>
@@ -194,7 +214,7 @@
       <h2>Kontakt</h2>
       <div class="card">
         <p>Vil du snakke med meg? Ta gjerne kontakt!</p>
-        <p style="margin-top: 1rem;">E-post: <a href="mailto:eline@example.no">eline@example.no</a><br>
+        <p style="margin-top: 1.5rem;">E-post: <a href="mailto:eline@example.no">eline@example.no</a><br>
         GitHub: <a href="https://github.com/elinehansen" target="_blank">github.com/elinehansen</a></p>
       </div>
     </section>
