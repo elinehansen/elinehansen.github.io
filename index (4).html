@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eline Hansen - Din personlige helseveileder</title>
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #f5f9f7;
+color: #2d3436;
+line-height: 1.8;
+}
+
+@keyframes headerGlow {
+0%, 100% {
+box-shadow: 0 0 20px rgba(129, 199, 132, 0.3);
+}
+50% {
+box-shadow: 0 0 40px rgba(129, 199, 132, 0.5);
+}
+}
+
+header {
+background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 50%, #81c784 100%);
+color: #fff;
+padding: 4rem 1.5rem;
+text-align: center;
+animation: headerGlow 4s ease-in-out infinite;
+}
+
+.header-content {
+max-width: 1000px;
+margin: 0 auto;
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 4rem;
+justify-content: flex-start;
+}
+
+.profile-image {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+object-fit: cover;
+border: 5px solid #fff;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+flex-shrink: 0;
+}
+
+.header-text {
+flex: 1;
+text-align: left;
+}
+
+.header-text h1 {
+font-size: 3.5rem;
+margin-bottom: 0.5rem;
+font-weight: 300;
+color: #fff;
+letter-spacing: 2px;
+font-style: italic;
+font-family: 'Georgia', 'Garamond', serif;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-text .tagline {
+color: #f1f8f6;
+font-size: 1.1rem;
+font-weight: 400;
+line-height: 1.6;
+max-width: 550px;
+margin-bottom: 1.5rem;
+}
+
+.icons-container {
+display: flex;
+gap: 2rem;
+margin-bottom: 1.5rem;
+flex-wrap: wrap;
+}
+
+.icon-item {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+color: #f1f8f6;
+font-size: 0.95rem;
+font-weight: 500;
+transition: all 0.3s ease;
+cursor: pointer;
+}
+
+.icon-item:hover {
+transform: translateY(-2px);
+color: #fff;
+}
+
+.icon-symbol {
+font-size: 1.8rem;
+display: inline-block;
+transition: transform 0.3s ease;
+}
+
+.icon-item:hover .icon-symbol {
+transform: scale(1.15);
+}
+
+nav {
+display: flex;
+justify-content: flex-start;
+gap: 2.5rem;
+flex-wrap: wrap;
+}
+
+nav a {
+color: #fff;
+text-decoration: none;
+font-size: 1rem;
+font-weight: 600;
+opacity: 0.9;
+transition: all 0.3s ease;
+border-bottom: 3px solid transparent;
+padding-bottom: 0.35rem;
+}
+
+nav a:hover {
+opacity: 1;
+border-bottom: 3px solid #fff;
+}
+
+main {
+max-width: 1000px;
+margin: 0 auto;
+padding: 3rem 1.5rem;
+}
+
+#om, #kontakt {
+max-width: 750px;
+margin: 0 auto 3rem auto;
+}
+
+section {
+margin-bottom: 3rem;
+}
+
+h2 {
+font-size: 1.8rem;
+margin-bottom: 1rem;
+border-bottom: 3px solid #81c784;
+padding-bottom: 0.5rem;
+color: #2d5016;
+font-weight: 700;
+}
+
+h3.group-title {
+font-size: 1.2rem;
+color: #2e7d32;
+margin: 2rem 0 1rem 0;
+font-weight: 700;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+footer {
+text-align: center;
+padding: 2rem 1.5rem;
+color: #66bb6a;
+font-size: 0.95rem;
+}
+
+.card {
+background: #fff;
+border-radius: 10px;
+padding: 1.8rem;
+box-shadow: 0 4px 12px rgba(129, 199, 132, 0.12);
+border-left: 5px solid #81c784;
+font-size: 1.05rem;
+line-height: 1.8;
+}
+
+.intro-card {
+max-width: 750px;
+margin: 0 auto 2.5rem auto;
+}
+
+a {
+color: #2e7d32;
+text-decoration: none;
+font-weight: 600;
+transition: color 0.3s ease;
+}
+
+a:hover {
+text-decoration: underline;
+color: #1b5e20;
+}
+
+.pricing-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+gap: 1.5rem;
+}
+
+.price-card {
+background: #fff;
+border-radius: 14px;
+padding: 1.6rem;
+box-shadow: 0 4px 12px rgba(129, 199, 132, 0.12);
+border-top: 4px solid #81c784;
+display: flex;
+flex-direction: column;
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.price-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 10px 24px rgba(129, 199, 132, 0.25);
+}
+
+.price-card.featured {
+border-top: 4px solid #2e7d32;
+background: linear-gradient(180deg, #f1f8f2 0%, #ffffff 18%);
+position: relative;
+}
+
+.price-card.featured::before {
+content: "Mest populær";
+position: absolute;
+top: -12px;
+right: 1.2rem;
+background: #2e7d32;
+color: #fff;
+font-size: 0.7rem;
+font-weight: 700;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+padding: 0.3rem 0.7rem;
+border-radius: 999px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.price-card h4 {
+font-size: 1.15rem;
+color: #2d5016;
+margin-bottom: 0.4rem;
+font-weight: 700;
+}
+
+.price-card .price {
+font-size: 1.6rem;
+font-weight: 700;
+color: #2e7d32;
+margin-bottom: 0.8rem;
+}
+
+.price-card .price span {
+font-size: 0.95rem;
+font-weight: 500;
+color: #66bb6a;
+}
+
+.price-card p {
+font-size: 0.95rem;
+color: #4a5a4d;
+line-height: 1.65;
+flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+.header-content {
+flex-direction: column;
+text-align: center;
+gap: 2rem;
+}
+
+.header-text {
+text-align: center;
+}
+
+.header-text h1 {
+font-size: 2.2rem;
+}
+
+.icons-container {
+justify-content: center;
+gap: 1.5rem;
+}
+
+nav {
+justify-content: center;
+gap: 1.5rem;
+}
+
+.profile-image {
+width: 160px;
+height: 160px;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="header-content">
+<img src="profile.jpg" alt="Eline Hansen" class="profile-image">
+<div class="header-text">
+<h1>Eline Hansen</h1>
+<p class="tagline">Din helse, dine behov. Fra trening og ernæring til søvn, stress og mindset – jeg er her for å guide deg mot den livskvaliteten du ønsker.</p>
+
+<div class="icons-container">
+<div class="icon-item">
+<span class="icon-symbol">💪</span>
+<span>Trening</span>
+</div>
+<div class="icon-item">
+<span class="icon-symbol">🥗</span>
+<span>Ernæring</span>
+</div>
+<div class="icon-item">
+<span class="icon-symbol">😴</span>
+<span>Søvn</span>
+</div>
+<div class="icon-item">
+<span class="icon-symbol">🧘</span>
+<span>Mindset</span>
+</div>
+</div>
+
+<nav>
+<a href="#om">Om</a>
+<a href="#tjenester">Tjenester</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+</div>
+</div>
+</header>
+
+<main>
+<section id="om">
+<h2>Om meg</h2>
+<div class="card">
+<p>Jeg startet innenfor helse i 2018 og har siden tatt utdanning som sykepleier, som jeg har jobbet som siden 2021. I 2022 tok jeg sertifisering som personlig trener og kostholdsveileder. Med erfaring fra psykisk helse og rus, hvor jeg jobbet med støttesamtaler, forstår jeg at virkelig helse handler om mer enn bare trening. Min erfaring innenfor gruppetrening, styrketrening og veiledning gir meg grunnlaget til å guide deg innen trening, ernæring, søvn, stress og mindset. Som empatisk og lyttende person brenner jeg for folkehelse, og jeg ønsker virkelig å gjøre en ekte forskjell i livet ditt.</p>
+</div>
+</section>
+
+<section id="tjenester">
+<h2>Tjenester</h2>
+
+<div class="card intro-card">
+<p>Jeg tilbyr flere ulike oppfølgingsprogrammer – digitalt, fysisk eller en kombinasjon – slik at du kan velge det opplegget som passer best inn i din hverdag og dine mål. Ta kontakt for en uforpliktende prat om hva som passer deg.</p>
+</div>
+
+<h3 class="group-title">📱 Digital veiledning</h3>
+<div class="pricing-grid">
+<div class="price-card">
+<h4>Ukentlig digital</h4>
+<div class="price">1995,- <span>/mnd</span></div>
+<p>15-minutters oppfølgingssesjon hver uke, tilgjengelig uansett hvor du befinner deg. Fokus på mental og fysisk velvære, med strategier tilpasset dine vaneendringer og mål.</p>
+</div>
+<div class="price-card">
+<h4>Annenhver uke digital</h4>
+<div class="price">1350,- <span>/mnd</span></div>
+<p>15-minutters digital sesjon annenhver uke, med rom for egen refleksjon og praksis mellom øktene. En dedikert veileder følger deg og bistår når du trenger det.</p>
+</div>
+<div class="price-card">
+<h4>Månedlig digital</h4>
+<div class="price">998,- <span>/mnd</span></div>
+<p>En 15-minutters digital sesjon hver måned som sjekkpunkt for fremgangen din. Passer godt for deg som er selvstyrt og trenger minimal veiledning.</p>
+</div>
+</div>
+
+<h3 class="group-title">🤝 Fysisk veiledning</h3>
+<div class="pricing-grid">
+<div class="price-card featured">
+<h4>Ukentlig fysisk</h4>
+<div class="price">4290,- <span>/mnd</span></div>
+<p>Personlig oppfølging med 45-minutters økter hver uke, ansikt til ansikt. Vi kartlegger sammen en vei mot varig livsstilsendring med bærekraftige strategier.</p>
+</div>
+<div class="price-card">
+<h4>Ukentlig fysisk – duo</h4>
+<div class="price">3190,- <span>/mnd</span></div>
+<p>Samme ukentlige oppfølging på 45 minutter, men sammen med en partner – til redusert pris per person.</p>
+</div>
+<div class="price-card">
+<h4>Annenhver uke fysisk</h4>
+<div class="price">2250,- <span>/mnd</span></div>
+<p>45-minutters fysiske møter annenhver uke, med tid til å implementere endringer og reflektere over fremgang mellom hver sesjon.</p>
+</div>
+<div class="price-card">
+<h4>To ganger i uken fysisk</h4>
+<div class="price">6990,- <span>/mnd</span></div>
+<p>Tettest mulig oppfølging med 45-minutters fysiske økter to ganger i uken, for deg som ønsker rask og solid fremgang.</p>
+</div>
+</div>
+
+<h3 class="group-title">🔄 Kombinert / hybrid</h3>
+<div class="pricing-grid">
+<div class="price-card">
+<h4>Hybrid ukentlig</h4>
+<div class="price">2990,- <span>/mnd</span></div>
+<p>Kombinerer 45-minutters fysiske møter annenhver uke med 15-minutters digitale sesjoner – det beste fra begge verdener.</p>
+</div>
+<div class="price-card">
+<h4>Månedlig fysisk og digital</h4>
+<div class="price">1799,- <span>/mnd</span></div>
+<p>Én fysisk økt (45 min) og én digital sesjon (15 min) i måneden. Gir jevnlig oppfølging med lavere frekvens.</p>
+</div>
+</div>
+
+<h3 class="group-title">✨ Annet</h3>
+<div class="pricing-grid">
+<div class="price-card">
+<h4>Tilgang til app med veiledning</h4>
+<div class="price">598,- <span>/mnd</span></div>
+<p>For deg som har etablerte vaner: tilgang til bibliotek med treningsplaner og oppskrifter, vanefunksjonalitet, fremgang og støtte via chat.</p>
+</div>
+<div class="price-card">
+<h4>Ukentlig gruppeaktivitet</h4>
+<div class="price">275,- <span>/gang</span></div>
+<p>Én gruppeaktivitet (digitalt eller fysisk), med varighet og innhold spesifisert av helseveileder.</p>
+</div>
+<div class="price-card">
+<h4>Gruppeaktivitet (4 økter)</h4>
+<div class="price">698–2899,- <span>/mnd</span></div>
+<p>4 gruppeaktiviteter i måneden (digitalt eller fysisk). Pris avhenger av aktivitet og antall deltakere.</p>
+</div>
+</div>
+</section>
+
+<section id="kontakt">
+<h2>Kontakt</h2>
+<div class="card">
+<p>Vil du snakke med meg? Ta gjerne kontakt!</p>
+<p style="margin-top: 1.5rem;">
+Telefon: <a href="tel:+4748301327">+47 483 01 327</a><br>
+E-post: <a href="mailto:eline_hansen97@hotmail.com">eline_hansen97@hotmail.com</a>
+</p>
+<p style="margin-top: 1.5rem;">
+<a href="https://abel.no/#kontakt" target="_blank" style="display: inline-block; background: #2e7d32; color: #fff; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 700;">Meld din interesse her →</a>
+</p>
+</div>
+</section>
+</main>
+
+<footer>
+&copy; 2026 Eline Hansen. Laget med GitHub Pages.
+</footer>
+
+</body>
+</html>
