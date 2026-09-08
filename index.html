@@ -13,22 +13,22 @@ padding: 0;
 
 body {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background-color: #f5f9f7;
+background: linear-gradient(180deg, #f4f9fd 0%, #eef6fc 100%);
 color: #2d3436;
 line-height: 1.8;
 }
 
 @keyframes headerGlow {
 0%, 100% {
-box-shadow: 0 0 20px rgba(129, 199, 132, 0.3);
+box-shadow: 0 0 20px rgba(66, 165, 245, 0.3);
 }
 50% {
-box-shadow: 0 0 40px rgba(129, 199, 132, 0.5);
+box-shadow: 0 0 40px rgba(66, 165, 245, 0.5);
 }
 }
 
 header {
-background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 50%, #81c784 100%);
+background: linear-gradient(135deg, #90caf9 0%, #64b5f6 35%, #42a5f5 65%, #1e88e5 100%);
 color: #fff;
 padding: 4rem 1.5rem;
 text-align: center;
@@ -72,7 +72,7 @@ text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-text .tagline {
-color: #f1f8f6;
+color: #e8f2fc;
 font-size: 1.1rem;
 font-weight: 400;
 line-height: 1.6;
@@ -91,7 +91,7 @@ flex-wrap: wrap;
 display: flex;
 align-items: center;
 gap: 0.5rem;
-color: #f1f8f6;
+color: #e8f2fc;
 font-size: 0.95rem;
 font-weight: 500;
 transition: all 0.3s ease;
@@ -154,15 +154,15 @@ margin-bottom: 3rem;
 h2 {
 font-size: 1.8rem;
 margin-bottom: 1rem;
-border-bottom: 3px solid #81c784;
+border-bottom: 3px solid #42a5f5;
 padding-bottom: 0.5rem;
-color: #2d5016;
+color: #0d47a1;
 font-weight: 700;
 }
 
 h3.group-title {
 font-size: 1.2rem;
-color: #2e7d32;
+color: #1565c0;
 margin: 2rem 0 1rem 0;
 font-weight: 700;
 display: flex;
@@ -173,7 +173,7 @@ gap: 0.5rem;
 footer {
 text-align: center;
 padding: 2rem 1.5rem;
-color: #66bb6a;
+color: #42a5f5;
 font-size: 0.95rem;
 }
 
@@ -181,8 +181,8 @@ font-size: 0.95rem;
 background: #fff;
 border-radius: 10px;
 padding: 1.8rem;
-box-shadow: 0 4px 12px rgba(129, 199, 132, 0.12);
-border-left: 5px solid #81c784;
+box-shadow: 0 4px 12px rgba(66, 165, 245, 0.12);
+border-left: 5px solid #42a5f5;
 font-size: 1.05rem;
 line-height: 1.8;
 }
@@ -193,7 +193,7 @@ margin: 0 auto 2.5rem auto;
 }
 
 a {
-color: #2e7d32;
+color: #1565c0;
 text-decoration: none;
 font-weight: 600;
 transition: color 0.3s ease;
@@ -201,7 +201,7 @@ transition: color 0.3s ease;
 
 a:hover {
 text-decoration: underline;
-color: #1b5e20;
+color: #0d47a1;
 }
 
 .pricing-grid {
@@ -214,8 +214,8 @@ gap: 1.5rem;
 background: #fff;
 border-radius: 14px;
 padding: 1.6rem;
-box-shadow: 0 4px 12px rgba(129, 199, 132, 0.12);
-border-top: 4px solid #81c784;
+box-shadow: 0 4px 12px rgba(66, 165, 245, 0.12);
+border-top: 4px solid #42a5f5;
 display: flex;
 flex-direction: column;
 transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -223,12 +223,12 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
 
 .price-card:hover {
 transform: translateY(-4px);
-box-shadow: 0 10px 24px rgba(129, 199, 132, 0.25);
+box-shadow: 0 10px 24px rgba(66, 165, 245, 0.25);
 }
 
 .price-card.featured {
-border-top: 4px solid #2e7d32;
-background: linear-gradient(180deg, #f1f8f2 0%, #ffffff 18%);
+border-top: 4px solid #1565c0;
+background: linear-gradient(180deg, #eaf3fc 0%, #ffffff 18%);
 position: relative;
 }
 
@@ -237,7 +237,7 @@ content: "Mest populær";
 position: absolute;
 top: -12px;
 right: 1.2rem;
-background: #2e7d32;
+background: #1565c0;
 color: #fff;
 font-size: 0.7rem;
 font-weight: 700;
@@ -250,7 +250,7 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 
 .price-card h4 {
 font-size: 1.15rem;
-color: #2d5016;
+color: #0d47a1;
 margin-bottom: 0.4rem;
 font-weight: 700;
 }
@@ -258,19 +258,19 @@ font-weight: 700;
 .price-card .price {
 font-size: 1.6rem;
 font-weight: 700;
-color: #2e7d32;
+color: #1565c0;
 margin-bottom: 0.8rem;
 }
 
 .price-card .price span {
 font-size: 0.95rem;
 font-weight: 500;
-color: #66bb6a;
+color: #42a5f5;
 }
 
 .price-card p {
 font-size: 0.95rem;
-color: #4a5a4d;
+color: #3d5266;
 line-height: 1.65;
 flex-grow: 1;
 }
@@ -393,7 +393,7 @@ Telefon: <a href="tel:+4748301327">+47 483 01 327</a><br>
 E-post: <a href="mailto:eline_hansen97@hotmail.com">eline_hansen97@hotmail.com</a>
 </p>
 <p style="margin-top: 1.5rem;">
-<a href="https://abel.no/#kontakt" target="_blank" style="display: inline-block; background: #2e7d32; color: #fff; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 700;">Meld din interesse her →</a>
+<a href="https://abel.no/#kontakt" target="_blank" style="display: inline-block; background: #1565c0; color: #fff; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 700;">Meld din interesse her →</a>
 </p>
 </div>
 </section>
