@@ -18,114 +18,46 @@ color: #2d3436;
 line-height: 1.8;
 }
 
-@keyframes headerGlow {
-0%, 100% {
-box-shadow: 0 0 20px rgba(66, 165, 245, 0.3);
-}
-50% {
-box-shadow: 0 0 40px rgba(66, 165, 245, 0.5);
-}
-}
-
 header {
-background: linear-gradient(135deg, #90caf9 0%, #64b5f6 35%, #42a5f5 65%, #1e88e5 100%);
-color: #fff;
-padding: 4rem 1.5rem;
+padding: 0;
 text-align: center;
-animation: headerGlow 4s ease-in-out infinite;
 }
 
-.header-content {
-max-width: 1000px;
-margin: 0 auto;
+.header-banner {
+width: 100%;
+display: block;
+}
+
+.header-banner img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.header-bar {
+background: #fdfcfa;
+padding: 1.1rem 1.5rem;
 display: flex;
-flex-direction: row;
-align-items: center;
-gap: 4rem;
-justify-content: flex-start;
-}
-
-.profile-image {
-width: 200px;
-height: 200px;
-border-radius: 50%;
-object-fit: cover;
-border: 5px solid #fff;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-flex-shrink: 0;
-}
-
-.header-text {
-flex: 1;
-text-align: left;
-}
-
-.header-text h1 {
-font-size: 3.5rem;
-margin-bottom: 0.5rem;
-font-weight: 300;
-color: #fff;
-letter-spacing: 2px;
-font-style: italic;
-font-family: 'Georgia', 'Garamond', serif;
-text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header-text .tagline {
-color: #e8f2fc;
-font-size: 1.1rem;
-font-weight: 400;
-line-height: 1.6;
-max-width: 550px;
-margin-bottom: 1.5rem;
-}
-
-.icons-container {
-display: flex;
-gap: 2rem;
-margin-bottom: 1.5rem;
 flex-wrap: wrap;
-}
-
-.icon-item {
-display: flex;
+justify-content: center;
 align-items: center;
-gap: 0.5rem;
-color: #e8f2fc;
-font-size: 0.95rem;
-font-weight: 500;
-transition: all 0.3s ease;
-cursor: pointer;
-}
-
-.icon-item:hover {
-transform: translateY(-2px);
-color: #fff;
-}
-
-.icon-symbol {
-font-size: 1.8rem;
-display: inline-block;
-transition: transform 0.3s ease;
-}
-
-.icon-item:hover .icon-symbol {
-transform: scale(1.15);
+gap: 2.5rem;
+border-bottom: 3px solid #90caf9;
 }
 
 nav {
 display: flex;
-justify-content: flex-start;
-gap: 2.5rem;
+justify-content: center;
+gap: 2rem;
 flex-wrap: wrap;
 }
 
 nav a {
-color: #fff;
+color: #0d47a1;
 text-decoration: none;
 font-size: 1rem;
 font-weight: 600;
-opacity: 0.9;
+opacity: 0.85;
 transition: all 0.3s ease;
 border-bottom: 3px solid transparent;
 padding-bottom: 0.35rem;
@@ -133,7 +65,7 @@ padding-bottom: 0.35rem;
 
 nav a:hover {
 opacity: 1;
-border-bottom: 3px solid #fff;
+border-bottom: 3px solid #1565c0;
 }
 
 main {
@@ -307,33 +239,14 @@ flex-grow: 1;
 }
 
 @media (max-width: 768px) {
-.header-content {
-flex-direction: column;
-text-align: center;
-gap: 2rem;
-}
-
-.header-text {
-text-align: center;
-}
-
-.header-text h1 {
-font-size: 2.2rem;
-}
-
-.icons-container {
-justify-content: center;
-gap: 1.5rem;
+.header-bar {
+gap: 1.2rem;
+padding: 1rem;
 }
 
 nav {
 justify-content: center;
-gap: 1.5rem;
-}
-
-.profile-image {
-width: 160px;
-height: 160px;
+gap: 1.2rem;
 }
 }
 </style>
@@ -341,37 +254,15 @@ height: 160px;
 <body>
 
 <header>
-<div class="header-content">
-<img src="profile.jpg" alt="Eline Hansen" class="profile-image">
-<div class="header-text">
-<h1>Eline Hansen</h1>
-<p class="tagline">Din helse, dine behov. Fra trening og ernæring til søvn, stress og mindset – jeg er her for å guide deg mot den livskvaliteten du ønsker.</p>
-
-<div class="icons-container">
-<div class="icon-item">
-<span class="icon-symbol">💪</span>
-<span>Trening</span>
+<div class="header-banner">
+<img src="header-banner.jpg" alt="Eline Hansen - Sykepleier, personlig trener, kostholdsveileder og helseveileder">
 </div>
-<div class="icon-item">
-<span class="icon-symbol">🥗</span>
-<span>Ernæring</span>
-</div>
-<div class="icon-item">
-<span class="icon-symbol">😴</span>
-<span>Søvn</span>
-</div>
-<div class="icon-item">
-<span class="icon-symbol">🧘</span>
-<span>Mindset</span>
-</div>
-</div>
-
+<div class="header-bar">
 <nav>
 <a href="#om">Om</a>
 <a href="#tjenester">Tjenester</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
-</div>
 </div>
 </header>
 
