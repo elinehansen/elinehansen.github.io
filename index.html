@@ -143,7 +143,7 @@ padding: 3rem 1.5rem;
 }
 
 #om {
-max-width: 950px;
+max-width: 750px;
 margin: 0 auto 3rem auto;
 }
 
@@ -152,39 +152,29 @@ max-width: 750px;
 margin: 0 auto 3rem auto;
 }
 
-.om-meg-layout {
-display: flex;
-gap: 2rem;
-align-items: stretch;
-}
-
 .om-meg-video {
-flex: 0 0 220px;
 border-radius: 14px;
 overflow: hidden;
 box-shadow: 0 4px 12px rgba(66, 165, 245, 0.18);
+margin-bottom: 1.5rem;
+max-height: 380px;
 }
 
 .om-meg-video video {
 width: 100%;
 height: 100%;
+max-height: 380px;
 object-fit: cover;
 display: block;
 }
 
-.om-meg-text {
-flex: 1;
-}
-
 @media (max-width: 650px) {
-.om-meg-layout {
-flex-direction: column;
+.om-meg-video {
+max-height: 260px;
 }
 
-.om-meg-video {
-flex: 0 0 auto;
-max-width: 280px;
-margin: 0 auto;
+.om-meg-video video {
+max-height: 260px;
 }
 }
 
@@ -388,16 +378,12 @@ height: 160px;
 <main>
 <section id="om">
 <h2>Om meg</h2>
-<div class="om-meg-layout">
 <div class="om-meg-video">
 <video src="om-meg-video.mp4" autoplay muted loop playsinline></video>
 </div>
-<div class="om-meg-text">
 <div class="card">
 <p>Jeg startet innenfor helse i 2018 og har siden tatt utdanning som sykepleier, som jeg har jobbet som siden 2021. I 2022 tok jeg sertifisering som personlig trener og kostholdsveileder. Med erfaring fra psykisk helse og rus, hvor jeg jobbet med støttesamtaler, forstår jeg at virkelig helse handler om mer enn bare trening. Min erfaring innenfor gruppetrening, styrketrening og veiledning gir meg grunnlaget til å guide deg innen trening, ernæring, søvn, stress og mindset. Som empatisk og lyttende person brenner jeg for folkehelse, og jeg ønsker virkelig å gjøre en ekte forskjell i livet ditt.</p>
 <p style="margin-top: 1.2rem;">For tiden er jeg under utdanning til å bli helseveileder i Abel.</p>
-</div>
-</div>
 </div>
 </section>
 
