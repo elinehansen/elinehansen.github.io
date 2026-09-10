@@ -116,6 +116,32 @@ max-height: 260px;
 }
 }
 
+.om-meg-gallery {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 0.8rem;
+margin-bottom: 1.8rem;
+}
+
+.om-meg-gallery img {
+width: 100%;
+height: 220px;
+object-fit: cover;
+border-radius: 12px;
+box-shadow: 0 4px 10px rgba(66, 165, 245, 0.15);
+display: block;
+}
+
+@media (max-width: 650px) {
+.om-meg-gallery {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.om-meg-gallery img {
+height: 160px;
+}
+}
+
 section {
 margin-bottom: 3rem;
 }
@@ -261,7 +287,7 @@ gap: 1.2rem;
 
 <header>
 <div class="header-banner">
-<img src="header-banner.jpg" alt="Eline Hansen - Sykepleier, personlig trener, kostholdsveileder og helseveileder">
+<img src="header-banner.jpg" alt="Eline Hansen - Sykepleier, personlig trener, kostholdsveileder og helseveileder. Mer energi, større overskudd, bedre balanse, en hverdag som passer deg.">
 </div>
 <div class="header-bar">
 <nav>
@@ -278,9 +304,20 @@ gap: 1.2rem;
 <video src="om-meg-video.mp4" autoplay muted loop playsinline></video>
 </div>
 <h2>Om meg</h2>
+
+<div class="om-meg-gallery">
+<img src="om-meg-foto-1.jpg" alt="Eline på tur i vinterlandskap med familien">
+<img src="om-meg-foto-2.jpg" alt="Portrett av Eline i skogen, ikledd Abel-genser">
+<img src="om-meg-foto-3.jpg" alt="Eline i fallskjermhopp">
+<img src="om-meg-foto-4.jpg" alt="Eline trener utendørs med manualer">
+</div>
+
 <div class="card">
-<p>Jeg startet innenfor helse i 2018 og har siden tatt utdanning som sykepleier, som jeg har jobbet som siden 2021. I 2022 tok jeg sertifisering som personlig trener og kostholdsveileder. Med erfaring fra psykisk helse og rus, hvor jeg jobbet med støttesamtaler, forstår jeg at virkelig helse handler om mer enn bare trening. Min erfaring innenfor gruppetrening, styrketrening og veiledning gir meg grunnlaget til å guide deg innen trening, ernæring, søvn, stress og mindset. Som empatisk og lyttende person brenner jeg for folkehelse, og jeg ønsker virkelig å gjøre en ekte forskjell i livet ditt.</p>
-<p style="margin-top: 1.2rem;">For tiden er jeg under utdanning til å bli helseveileder i Abel.</p>
+<p>Jeg er mamma, sykepleier, personlig trener og kostholdsveileder – og for tiden under utdanning til helseveileder i Abel.</p>
+<p style="margin-top: 1.2rem;">Jeg er oppriktig opptatt av mennesker, helse og hva som skal til for å ha det godt i egen hverdag. Bevegelse og trening er en viktig del av livet mitt. Jeg liker å utfordre meg selv og kjenne på mestring.</p>
+<p style="margin-top: 1.2rem;">Erfaringen min som sykepleier har også lært meg at helse handler om langt mer enn trening og kosthold. Søvn, stress, vaner, relasjoner og det som foregår på innsiden påvirker hvordan vi har det. Jeg bryr meg mye om andre og ønsker å forstå mennesket foran meg – ikke bare utfordringen.</p>
+<p style="margin-top: 1.2rem;">Derfor brenner jeg for å hjelpe mennesker med å finne løsninger som faktisk passer inn i deres liv, enten målet er å bli sterkere, endre vaner, få mer overskudd eller rett og slett få det bedre.</p>
+<p style="margin-top: 1.2rem;">For meg handler helse ikke om å gjøre alt riktig, men om å finne det som gir deg et godt liv – på din måte.</p>
 </div>
 </section>
 
