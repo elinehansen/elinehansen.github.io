@@ -201,7 +201,7 @@ color: #0d47a1;
 
 .pricing-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+grid-template-columns: repeat(4, 1fr);
 gap: 1.5rem;
 }
 
@@ -270,6 +270,12 @@ line-height: 1.65;
 flex-grow: 1;
 }
 
+@media (max-width: 1400px) {
+.pricing-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
 @media (max-width: 768px) {
 .header-bar {
 gap: 1.2rem;
@@ -279,6 +285,10 @@ padding: 1rem;
 nav {
 justify-content: center;
 gap: 1.2rem;
+}
+
+.pricing-grid {
+grid-template-columns: 1fr;
 }
 }
 </style>
@@ -314,9 +324,9 @@ gap: 1.2rem;
 
 <div class="card">
 <p>Jeg er mamma, sykepleier, personlig trener og kostholdsveileder – og for tiden under utdanning til helseveileder i Abel.</p>
-<p style="margin-top: 1.2rem;">Jeg er oppriktig opptatt av mennesker, helse og hva som skal til for å ha det godt i egen hverdag. Bevegelse og trening er en viktig del av livet mitt. Jeg liker å utfordre meg selv og kjenne på mestring.</p>
-<p style="margin-top: 1.2rem;">Erfaringen min som sykepleier har også lært meg at helse handler om langt mer enn trening og kosthold. Søvn, stress, vaner, relasjoner og det som foregår på innsiden påvirker hvordan vi har det. Jeg bryr meg mye om andre og ønsker å forstå mennesket foran meg – ikke bare utfordringen.</p>
-<p style="margin-top: 1.2rem;">Derfor brenner jeg for å hjelpe mennesker med å finne løsninger som faktisk passer inn i deres liv, enten målet er å bli sterkere, endre vaner, få mer overskudd eller rett og slett få det bedre.</p>
+<p style="margin-top: 1.2rem;">Jeg er oppriktig opptatt av mennesker, helse og hva som skal til for å ha det godt i egen hverdag. Bevegelse og trening er en viktig del av livet mitt. Jeg liker å anbefale løsninger som er enkle, praktiske og som gir deg mer energi og større overskudd.</p>
+<p style="margin-top: 1.2rem;">Erfaringen min som sykepleier har også lært meg at helse handler om langt mer enn trening og kosthold. Søvn, stress, vaner, relasjoner og det som foregår på innsiden påvirker din hverdag og helsen din.</p>
+<p style="margin-top: 1.2rem;">Derfor brenner jeg for å hjelpe mennesker med å finne løsninger som faktisk passer inn i deres liv, enten målet er å bli sterkere, endre vaner, få mer overskudd eller å finne en bedre balanse.</p>
 <p style="margin-top: 1.2rem;">For meg handler helse ikke om å gjøre alt riktig, men om å finne det som gir deg et godt liv – på din måte.</p>
 </div>
 </section>
@@ -325,7 +335,7 @@ gap: 1.2rem;
 <h2>Tjenester</h2>
 
 <div class="card intro-card">
-<p>Jeg tilbyr ulike oppfølgingsprogrammer – digitalt, fysisk eller en kombinasjon – slik at du kan velge det opplegget som passer best inn i din hverdag og dine mål. Ta kontakt for en uforpliktende prat om hva som passer deg og for detaljert prisoversikt.</p>
+<p>Jeg tilbyr ulike oppfølgingsprogrammer – digitalt, fysisk eller en kombinasjon – slik at du kan velge det opplegget som passer best inn i din hverdag og dine mål. Ta kontakt for en uforpliktende samtale om hva som passer for deg.</p>
 </div>
 
 <div class="pricing-grid">
@@ -361,7 +371,7 @@ Telefon: <a href="tel:+4748301327">+47 483 01 327</a><br>
 E-post: <a href="mailto:eline_hansen97@hotmail.com">eline_hansen97@hotmail.com</a>
 </p>
 <p style="margin-top: 1.5rem;">
-<a href="https://abel.no/#kontakt" target="_blank" style="display: inline-block; background: #1565c0; color: #fff; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 700;">Meld din interesse her →</a>
+<a href="https://abel.no/#kontakt" target="_blank" style="display: inline-block; background: #1565c0; color: #fff; padding: 0.7rem 1.5rem; border-radius: 8px; font-weight: 700;">Meld din interesse</a>
 </p>
 </div>
 </section>
