@@ -27,6 +27,9 @@ text-align: center;
 width: 100%;
 display: flex;
 justify-content: center;
+background: linear-gradient(135deg, #f5f5f0 0%, #efefea 100%);
+min-height: 400px;
+align-items: center;
 }
 
 .header-banner img {
@@ -34,6 +37,8 @@ width: 100%;
 max-width: 1300px;
 height: auto;
 display: block;
+object-fit: contain;
+padding: 2rem 1.5rem;
 }
 
 .header-content {
@@ -309,6 +314,10 @@ font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
+.header-banner {
+min-height: 300px;
+}
+
 .header-content {
 padding: 1.5rem 1rem;
 }
@@ -343,7 +352,7 @@ grid-template-columns: 1fr;
 
 <header>
 <div class="header-banner">
-<img src="header-banner.jpg" alt="Eline Hansen - Sykepleier, personlig trener, kostholdsveileder og helseveileder. Mer energi, større overskudd, bedre balanse, en hverdag som passer deg.">
+<img src="header-banner.jpg" alt="Eline Hansen - En sunnere, sterkere og mer balansert hverdag på dine premisser">
 </div>
 <div class="header-content">
 <div class="header-title">Eline Hansen</div>
