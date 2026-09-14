@@ -19,7 +19,6 @@ line-height: 1.8;
 }
 
 header {
-position: relative;
 padding: 0;
 text-align: center;
 }
@@ -28,7 +27,6 @@ text-align: center;
 width: 100%;
 display: flex;
 justify-content: center;
-position: relative;
 }
 
 .header-banner img {
@@ -38,17 +36,33 @@ height: auto;
 display: block;
 }
 
+.header-content {
+background: #fff;
+padding: 2rem 1.5rem;
+border-bottom: 1px solid #e0e0e0;
+}
+
+.header-title {
+font-size: 2rem;
+color: #0d47a1;
+font-weight: 700;
+margin-bottom: 0.5rem;
+}
+
+.header-tagline {
+font-size: 1.05rem;
+color: #1565c0;
+font-weight: 500;
+letter-spacing: 0.5px;
+}
+
 .header-bar {
-position: absolute;
-top: 0;
-right: 0;
-left: 0;
-background: rgba(13, 71, 161, 0.15);
-backdrop-filter: blur(8px);
-padding: 1.2rem 2rem;
+background: #fdfcfa;
+padding: 1rem 1.5rem;
 display: flex;
 justify-content: center;
 align-items: center;
+border-bottom: 1px solid #e0e0e0;
 }
 
 nav {
@@ -59,20 +73,19 @@ flex-wrap: wrap;
 }
 
 nav a {
-color: #fff;
+color: #0d47a1;
 text-decoration: none;
 font-size: 1rem;
 font-weight: 600;
-opacity: 0.95;
+opacity: 0.85;
 transition: all 0.3s ease;
 border-bottom: 2px solid transparent;
 padding-bottom: 0.25rem;
-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 nav a:hover {
 opacity: 1;
-border-bottom: 2px solid #fff;
+border-bottom: 2px solid #1565c0;
 }
 
 main {
@@ -278,8 +291,12 @@ grid-template-columns: repeat(2, 1fr);
 }
 
 @media (max-width: 1024px) {
-.header-bar {
-padding: 1rem 1.5rem;
+.header-title {
+font-size: 1.6rem;
+}
+
+.header-tagline {
+font-size: 0.95rem;
 }
 
 nav {
@@ -292,6 +309,18 @@ font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
+.header-content {
+padding: 1.5rem 1rem;
+}
+
+.header-title {
+font-size: 1.4rem;
+}
+
+.header-tagline {
+font-size: 0.9rem;
+}
+
 .header-bar {
 padding: 0.8rem 1rem;
 }
@@ -315,13 +344,17 @@ grid-template-columns: 1fr;
 <header>
 <div class="header-banner">
 <img src="header-banner.jpg" alt="Eline Hansen - Sykepleier, personlig trener, kostholdsveileder og helseveileder. Mer energi, større overskudd, bedre balanse, en hverdag som passer deg.">
+</div>
+<div class="header-content">
+<div class="header-title">Eline Hansen</div>
+<div class="header-tagline">Sykepleier • Personlig trener • Kostholdsveileder • Helseveileder</div>
+</div>
 <div class="header-bar">
 <nav>
 <a href="#om">Om</a>
 <a href="#tjenester">Tjenester</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
-</div>
 </div>
 </header>
 
