@@ -19,6 +19,7 @@ line-height: 1.8;
 }
 
 header {
+position: relative;
 padding: 0;
 text-align: center;
 }
@@ -27,6 +28,7 @@ text-align: center;
 width: 100%;
 display: flex;
 justify-content: center;
+position: relative;
 }
 
 .header-banner img {
@@ -37,41 +39,40 @@ display: block;
 }
 
 .header-bar {
-background: #fdfcfa;
-padding: 0.7rem 2rem;
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+background: rgba(13, 71, 161, 0.15);
+backdrop-filter: blur(8px);
+padding: 1.2rem 2rem;
 display: flex;
-flex-wrap: wrap;
 justify-content: center;
 align-items: center;
-gap: 2.5rem;
-max-width: 420px;
-margin: 0 auto;
-border-radius: 0 0 12px 12px;
-box-shadow: 0 4px 12px rgba(66, 165, 245, 0.15);
-border-bottom: 3px solid #90caf9;
 }
 
 nav {
 display: flex;
 justify-content: center;
-gap: 2rem;
+gap: 2.5rem;
 flex-wrap: wrap;
 }
 
 nav a {
-color: #0d47a1;
+color: #fff;
 text-decoration: none;
 font-size: 1rem;
 font-weight: 600;
-opacity: 0.85;
+opacity: 0.95;
 transition: all 0.3s ease;
-border-bottom: 3px solid transparent;
-padding-bottom: 0.35rem;
+border-bottom: 2px solid transparent;
+padding-bottom: 0.25rem;
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 nav a:hover {
 opacity: 1;
-border-bottom: 3px solid #1565c0;
+border-bottom: 2px solid #fff;
 }
 
 main {
@@ -276,15 +277,31 @@ grid-template-columns: repeat(2, 1fr);
 }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 .header-bar {
-gap: 1.2rem;
-padding: 1rem;
+padding: 1rem 1.5rem;
 }
 
 nav {
-justify-content: center;
+gap: 1.8rem;
+}
+
+nav a {
+font-size: 0.95rem;
+}
+}
+
+@media (max-width: 768px) {
+.header-bar {
+padding: 0.8rem 1rem;
+}
+
+nav {
 gap: 1.2rem;
+}
+
+nav a {
+font-size: 0.9rem;
 }
 
 .pricing-grid {
@@ -298,13 +315,13 @@ grid-template-columns: 1fr;
 <header>
 <div class="header-banner">
 <img src="header-banner.jpg" alt="Eline Hansen - Sykepleier, personlig trener, kostholdsveileder og helseveileder. Mer energi, større overskudd, bedre balanse, en hverdag som passer deg.">
-</div>
 <div class="header-bar">
 <nav>
 <a href="#om">Om</a>
 <a href="#tjenester">Tjenester</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
+</div>
 </div>
 </header>
 
